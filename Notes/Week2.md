@@ -57,17 +57,17 @@
 - Force methods
 
 ```csharp
-rb.AddForce(Vector3 force, ForceMode mode = ForceMode.Force);
+rb.AddForce((Vector3) force, (ForceMode) mode = ForceMode.Force);
 rb.AddForce(Vector3.up); // will send something upwards regardless of its rotation
-rb.AddRelativeForce(Vector3 force, ForceMode mode = ForceMode.Force);
+rb.AddRelativeForce((Vector3) force, (ForceMode) mode = ForceMode.Force);
 rb.AddRelativeForce(Vector3.forward);
 ```
 
 - Torque Methods
 
 ```csharp
-rb.AddTorque(Vector3 torque, ForceMode mode = ForceMode.Force);
-rb.AddRelativeTorque(..)
+rb.AddTorque((Vector3) torque, (ForceMode) mode = ForceMode.Force);
+rb.AddRelativeTorque()
 ```
 
 - AddExplosionForce
