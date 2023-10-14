@@ -57,28 +57,17 @@
 - Force methods
 
 ```csharp
-<<<<<<< HEAD
 AddForce(Vector3 force, ForceMode mode = ForceMode.Force);
 rb.AddForce(Vector3.up); // will send something upwards regardless of its rotation
 AddRelativeForce(Vector3 force, ForceMode mode = ForceMode.Force);
-=======
-rb.AddForce((Vector3) force, (ForceMode) mode = ForceMode.Force);
-rb.AddForce(Vector3.up); // will send something upwards regardless of its rotation
-rb.AddRelativeForce((Vector3) force, (ForceMode) mode = ForceMode.Force);
->>>>>>> 794e83d594e607101102bf9c05cfe2a6dca7509c
 rb.AddRelativeForce(Vector3.forward);
 ```
 
 - Torque Methods
 
 ```csharp
-<<<<<<< HEAD
 rb.AddTorque(Vector3 torque, ForceMode mode = ForceMode.Force);
 AddRelativeTorque(Vector3 torque, ForceMode mode = ForceMode.Force);
-=======
-rb.AddTorque((Vector3) torque, (ForceMode) mode = ForceMode.Force);
-rb.AddRelativeTorque()
->>>>>>> 794e83d594e607101102bf9c05cfe2a6dca7509c
 ```
 
 - AddExplosionForce
@@ -145,7 +134,6 @@ bool Raycast(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float ma
 - `PhysicsRaycastAll` to get an array of `RaycastHit[]` results for everything it collided with
 - `Debug.DrawRay`
 - Ray pointing to the bottom - what is the player standing on?
-<<<<<<< HEAD
 
 ### Prefabs
 
@@ -172,5 +160,3 @@ Destroy(this, 1.5f); // will destroy object in 1.5 seconds
 
 - Better to disable to destroy
     - “Pooling” objects
-=======
->>>>>>> 794e83d594e607101102bf9c05cfe2a6dca7509c
