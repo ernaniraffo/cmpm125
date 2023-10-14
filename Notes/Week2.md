@@ -57,9 +57,9 @@
 - Force methods
 
 ```csharp
-rb.AddForce(Vector3 force, ForceMode mode = ForceMode.Force);
+AddForce(Vector3 force, ForceMode mode = ForceMode.Force);
 rb.AddForce(Vector3.up); // will send something upwards regardless of its rotation
-rb.AddRelativeForce(Vector3 force, ForceMode mode = ForceMode.Force);
+AddRelativeForce(Vector3 force, ForceMode mode = ForceMode.Force);
 rb.AddRelativeForce(Vector3.forward);
 ```
 
@@ -67,7 +67,7 @@ rb.AddRelativeForce(Vector3.forward);
 
 ```csharp
 rb.AddTorque(Vector3 torque, ForceMode mode = ForceMode.Force);
-rb.AddRelativeTorque(..)
+AddRelativeTorque(Vector3 torque, ForceMode mode = ForceMode.Force);
 ```
 
 - AddExplosionForce
@@ -134,3 +134,29 @@ bool Raycast(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float ma
 - `PhysicsRaycastAll` to get an array of `RaycastHit[]` results for everything it collided with
 - `Debug.DrawRay`
 - Ray pointing to the bottom - what is the player standing on?
+
+### Prefabs
+
+- Store exact representation of a GameObject
+
+### Instantiate
+
+- Make a new GameObjects through code
+- To create a new object, you need a reference for the object you will be creating
+- References can either be prefabs in the Project, or another object in the Scene
+- Objects created will be a duplicate/copy
+
+### Destroy
+
+- Remove the GameObject from the scene after the current Update loop
+- can also `Destroy()` a component, example:
+
+```csharp
+rb = otherGameObject.GetComponent<RigidBody>();
+Destroy(rb);
+
+Destroy(this, 1.5f); // will destroy object in 1.5 seconds
+```
+
+- Better to disable to destroy
+    - “Pooling” objects
