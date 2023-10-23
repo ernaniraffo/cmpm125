@@ -18,8 +18,8 @@ public class DisableWallIfGoldenChest : MonoBehaviour
         
     }
 
-	private void OnTriggerEnter(Collider other)
-	{
+    private void OnTriggerEnter(Collider other)
+    {
         Debug.Log("entered");
         Vector3 wallToMovePosition = wallToMove.gameObject.transform.position;
 
@@ -31,8 +31,8 @@ public class DisableWallIfGoldenChest : MonoBehaviour
         GameSingleton.main.levelManager.level += 1;
     }
 
-	private void OnTriggerExit(Collider other)
-	{
+    private void OnTriggerExit(Collider other)
+    {
         gameObject.GetComponent<Collider>().isTrigger = false;
-	}
+    }
 }

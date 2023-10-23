@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameSingleton : MonoBehaviour
 {
     private static GameSingleton _main;
-	public static GameSingleton main { get { return _main; } }
+    public static GameSingleton main { get { return _main; } }
 
     public WallManager wallManager { get; private set; }
     public ChestManager chestManager { get; private set; }
@@ -13,9 +13,9 @@ public class GameSingleton : MonoBehaviour
     public LevelManager levelManager { get; private set; }
     public Player player { get; private set; }
 
-	private void Awake()
-	{
-		if (_main != null && _main != this)
+    private void Awake()
+    {
+        if (_main != null && _main != this)
         {
             Destroy(this.gameObject);
         } else
@@ -30,8 +30,8 @@ public class GameSingleton : MonoBehaviour
         player = GetComponentInChildren<Player>();
     }
 
-	// Start is called before the first frame update
-	void Start()
+    // Start is called before the first frame update
+    void Start()
     {
     }
 
