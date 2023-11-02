@@ -39,6 +39,19 @@ public class ChestManager : MonoBehaviour
         if (currChest == chestsSpawned.Length)
         {
             currChest = 0;
+            ShuffleChests();
+        }
+    }
+
+    public void ShuffleChests()
+    {
+        for (int i = 0; i < chestsSpawned.Length - 1; i += 1)
+        {
+            int j = Random.Range(i, chestsSpawned.Length);
+
+            GameObject temp = chestsSpawned[i];
+            chestsSpawned[i] = chestsSpawned[j];
+            chestsSpawned[j] = temp;
         }
     }
 }

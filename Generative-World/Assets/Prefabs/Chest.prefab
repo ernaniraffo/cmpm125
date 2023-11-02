@@ -67,7 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca31f3999fa84becad4aeeeb9abbfdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallToMove: {fileID: 0}
 --- !u!1 &3542623721411179673
 GameObject:
   m_ObjectHideFlags: 0
