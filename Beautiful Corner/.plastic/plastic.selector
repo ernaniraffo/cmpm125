@@ -1,0 +1,4 @@
+repository "Beautiful Corner@eraffo@cloud"
+  path "/"
+    br "/main"
+    co "/main"
