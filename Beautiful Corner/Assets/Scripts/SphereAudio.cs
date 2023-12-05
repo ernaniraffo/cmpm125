@@ -5,11 +5,13 @@ using UnityEngine;
 public class SphereAudio : MonoBehaviour
 {
     public AudioSource audioSource;
+    public ParticleManager particleManager;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        particleManager = FindObjectOfType<ParticleManager>();
     }
 
     // Update is called once per frame
@@ -20,7 +22,11 @@ public class SphereAudio : MonoBehaviour
 
     public void PlayAudio(AudioClip clip)
     {
-        Debug.Log("Playing Ice Audio");
-        audioSource.PlayOneShot(clip, 0.3f);
+        audioSource.PlayOneShot(clip, 0.9f);
+        ParticleSystem ps = Instantiate(particleManager.particles, transform);
+        ps.transform.SetParent(transform);
+        ps.transform.position = transform.position;
+        ps.Play();
+        ps.Emit(5);
     }
 }

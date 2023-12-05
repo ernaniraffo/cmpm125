@@ -55,7 +55,7 @@ public class PlantEmitter : MonoBehaviour
             particlesMain.startColor = Color.white;
         }
         lightSource.enabled = particles.particleCount > 1;
-        lightSource.intensity = particles.particleCount * 0.1f;
+        lightSource.intensity = particles.particleCount * 0.1f * 1e+05f;
         if (! lightSource.enabled)
         {
             particles.Stop();
